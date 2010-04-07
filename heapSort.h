@@ -8,9 +8,9 @@ public:
 	HeapSort<Type>(int len);
 	void Initial();
 	void Sort();
-	void HeapSort<Type>::Heapify(int low,int high);
+	void Heapify(int low,int high);
 	void Print(int l,int r);
-	void HeapSort<Type>::BuildHeap(int n);
+	void BuildHeap(int n);
 	void Print();
 };
 

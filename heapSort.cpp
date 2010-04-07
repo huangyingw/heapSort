@@ -1,12 +1,11 @@
 // HeapSort.cpp : 定义控制台应用程序的入口点。
 //
 
-#include "stdafx.h"
 #include<iostream>
 using namespace std;
-#include "HeapSort.h"
+#include "heapSort.h"
 
-void main() 
+int main() 
 {
 	HeapSort<int> *heapSort=new HeapSort<int>(20);
 	heapSort->data[0]=6;  
@@ -31,4 +30,5 @@ void main()
 	heapSort->data[19]=19;
 	heapSort->Sort();
 	heapSort->Print();
+	return 0;
 }

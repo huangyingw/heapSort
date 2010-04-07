@@ -1,6 +1,6 @@
-run : string.o
-	g++ -o run string.o
-string.o : string.cpp string.h
-	g++ -c string.cpp
+run : heapSort.o
+	g++ -o run heapSort.o
+heapSort.o : heapSort.cpp heapSort.h
+	g++ -c heapSort.cpp
 clean :
-	rm run string.o
+	rm run heapSort.o
