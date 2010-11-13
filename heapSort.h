@@ -47,9 +47,9 @@ template <class Type> void HeapSort<Type>::Heapify(int low,int high)
     }
     if(data[current]<data[child])
     {
-      temp=data[child];
-      data[child]=data[current];
-      data[current]=temp;
+      data[child]^=data[current];
+      data[current]^=data[child];
+      data[child]^=data[current];
       Heapify(2*current+1,high);
       Heapify(2*current+2,high);
     }
