@@ -21,11 +21,7 @@ template <class Type> HeapSort<Type>::HeapSort(int len)
 
 template <class Type> void HeapSort<Type>::Print()
 {
-  for(int i=0;i<length;i++)
-  {
-    cout<<data[i]<<",";
-  }
-  cout<<endl;
+  Print(0,length-1);
 }
 
 template <class Type> void HeapSort<Type>::Print(int l,int r)
