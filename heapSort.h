@@ -6,7 +6,6 @@ template <class Type> class HeapSort
   public:
     Type* data;
     HeapSort<Type>(int len);
-    void Initial();
     void Sort();
     void Heapify(int low,int high);
     void Print(int l,int r);
@@ -18,11 +17,6 @@ template <class Type> HeapSort<Type>::HeapSort(int len)
 {
   length=len;
   data=new Type[length];
-}
-
-template <class Type> void HeapSort<Type>::Initial()
-{
-
 }
 
 template <class Type> void HeapSort<Type>::Print()
