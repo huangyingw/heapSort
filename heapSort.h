@@ -41,10 +41,8 @@ template <class Type> void HeapSort<Type>::Heapify(int low,int high)
   if(child<=high)//
   {
     if(child+1<high)//右子女存在的情况下
-    {
       if(data[child]<data[child+1])
         child++;
-    }
     if(data[current]<data[child])
     {
       data[child]^=data[current];
@@ -70,8 +68,8 @@ template <class Type> void HeapSort<Type>::Sort()//归并排序
   for(int i=length-1;i>=1;i--)
   {
     BuildHeap(i);
-    temp=data[i];
-    data[i]=data[0];
-    data[0]=temp;
+    data[i]^=data[0];
+    data[0]^=data[i];
+    data[i]^=data[0];
   }
 }
