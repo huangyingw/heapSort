@@ -43,7 +43,7 @@ template <class Type> void HeapSort<Type>::Print(int l,int r)
   cout<<endl;
 }
 
-template <class Type> void HeapSort<Type>::Heapify(int low,int high) 
+template <class Type> void HeapSort<Type>::Heapify(int low,int high)
 {
   Type temp;
   int current=low;
@@ -67,7 +67,7 @@ template <class Type> void HeapSort<Type>::Heapify(int low,int high)
 }
 
 
-template <class Type> void HeapSort<Type>::BuildHeap(int n) 
+template <class Type> void HeapSort<Type>::BuildHeap(int n)
 {
   for(int i=(n-1)/2;i>=0;i--)//为什么此处是(n-1)/2,得自己想想
   {
