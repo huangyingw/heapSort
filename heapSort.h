@@ -5,11 +5,11 @@ template <class Type> class HeapSort
 
   public:
     Type* data;
-    HeapSort<Type>(int len);
+    HeapSort<Type>(int );
     void Sort();
-    void Heapify(int low,int high);
-    void Print(int l,int r);
-    void BuildHeap(int n);
+    void Heapify(int ,int );
+    void Print(int ,int );
+    void BuildHeap(int );
     void Print();
 };
 
