@@ -1,3 +1,3 @@
 OBJECTS = heapSort.exe
-include ../../GNU_makefile_template
+include ../GNU_makefile_template
 LOCFLAGS = -I../heapSort
