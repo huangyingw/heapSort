@@ -1,3 +1,6 @@
-OBJECTS = heapSort.exe
+run : heapSort.o
 include ../GNU_makefile_template
-LOCFLAGS = -I../heapSort
+heapSort.o : heapSort.cpp heapSort.h
+	g++ -c heapSort.cpp
+clean :
+	rm run heapSort.o
