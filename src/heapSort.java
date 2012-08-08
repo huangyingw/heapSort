@@ -1,6 +1,11 @@
 class HeapSort {
-	private int length;
 	private int[] data;
+	private int length;
+
+	public HeapSort(int len) {
+		length = len;
+		data = new int[length];
+	}
 
 	public HeapSort(int[] data) {
 		super();
@@ -8,27 +13,10 @@ class HeapSort {
 		length = data.length;
 	}
 
-	public HeapSort(int len) {
-		length = len;
-		data = new int[length];
-	}
-
-	public void Initial() {
-
-	}
-
-	public void Print() {
-		for (int i = 0; i < length; i++) {
-			System.out.print(data[i] + ",");
+	public void BuildHeap(int n) {
+		for (int i = (n - 1) / 2; i >= 0; i--) {
+			Heapify(i, n);
 		}
-		System.out.println();
-	}
-
-	public void Print(int l, int r) {
-		for (int i = l; i <= r; i++) {
-			System.out.print(data[i] + ",");
-		}
-		System.out.println();
 	}
 
 	public void Heapify(int low, int high) {
@@ -50,10 +38,22 @@ class HeapSort {
 		}
 	}
 
-	public void BuildHeap(int n) {
-		for (int i = (n - 1) / 2; i >= 0; i--) {
-			Heapify(i, n);
+	public void Initial() {
+
+	}
+
+	public void Print() {
+		for (int i = 0; i < length; i++) {
+			System.out.print(data[i] + ",");
 		}
+		System.out.println();
+	}
+
+	public void Print(int l, int r) {
+		for (int i = l; i <= r; i++) {
+			System.out.print(data[i] + ",");
+		}
+		System.out.println();
 	}
 
 	public void Sort() {
