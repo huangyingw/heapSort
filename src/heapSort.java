@@ -37,10 +37,11 @@ class HeapSort {
 	}
 
 	private void swap(int current, int child) {
-		int temp;
-		temp = data[child];
-		data[child] = data[current];
-		data[current] = temp;
+		if (current != child) {
+			data[child] ^= data[current];
+			data[current] ^= data[child];
+			data[child] ^= data[current];
+		}
 	}
 
 	public void Initial() {
