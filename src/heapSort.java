@@ -29,13 +29,18 @@ class HeapSort {
 					child++;
 			}
 			if (data[current] < data[child]) {
-				temp = data[child];
-				data[child] = data[current];
-				data[current] = temp;
+				swap(current, child);
 				Heapify(2 * current + 1, high);
 				Heapify(2 * current + 2, high);
 			}
 		}
+	}
+
+	private void swap(int current, int child) {
+		int temp;
+		temp = data[child];
+		data[child] = data[current];
+		data[current] = temp;
 	}
 
 	public void Initial() {
