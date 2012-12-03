@@ -20,7 +20,6 @@ class HeapSort {
 	}
 
 	public void Heapify(int low, int high) {
-		int temp;
 		int current = low;
 		int child = 2 * current + 1;
 		if (child <= high) {
