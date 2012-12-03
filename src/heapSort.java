@@ -44,10 +44,6 @@ class HeapSort {
 		}
 	}
 
-	public void Initial() {
-
-	}
-
 	public void Print() {
 		for (int i = 0; i < length; i++) {
 			System.out.print(data[i] + ",");
@@ -63,12 +59,9 @@ class HeapSort {
 	}
 
 	public void Sort() {
-		int temp;
 		for (int i = length - 1; i >= 1; i--) {
 			BuildHeap(i);
-			temp = data[i];
-			data[i] = data[0];
-			data[0] = temp;
+			swap(0, i);
 		}
 	}
 }
